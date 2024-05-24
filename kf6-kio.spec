@@ -93,6 +93,7 @@ Requires:	kf6-kwidgetsaddons >= %{version}
 Requires:	kf6-kwindowsystem >= %{version}
 Requires:	kf6-kxmlgui >= %{version}
 Requires:	kf6-solid >= %{version}
+Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -132,6 +133,7 @@ Requires:	kf6-kservice-devel >= %{version}
 Requires:	kf6-kwindowsystem-devel >= %{version}
 Requires:	kf6-kxmlgui-devel >= %{version}
 Requires:	kf6-solid-devel >= %{version}
+Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
