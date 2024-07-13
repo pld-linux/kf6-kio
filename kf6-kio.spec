@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.3
+%define		kdeframever	6.4
 %define		qtver		5.15.2
 %define		kfname		kio
 
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
-Version:	6.3.0
+Version:	6.4.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	c6cf49d84028cd7b51537e9e4be442cc
+# Source0-md5:	30bae7de61dac69b85fb7a65d26efd8b
 Patch0:		kio_help-fallback-to-kde4-docs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
@@ -368,6 +368,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf6/searchproviders/youtube.desktop
 %{_datadir}/qlogging-categories6/kio.categories
 %{_datadir}/qlogging-categories6/kio.renamecategories
+%{_desktopdir}/org.kde.kiod6.desktop
 
 %files devel
 %defattr(644,root,root,755)
