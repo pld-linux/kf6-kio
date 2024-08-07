@@ -1,0 +1,15 @@
+diff -up kio-5.98.0/src/kioworkers/help/kio_help.cpp.orig kio-5.98.0/src/kioworkers/help/kio_help.cpp
+--- kio-5.98.0/src/kioworkers/help/kio_help.cpp.orig
++++ kio-5.98.0/src/kioworkers/help/kio_help.cpp
+@@ -35,7 +35,9 @@
+     QStringList search;
+ 
+     // assemble the local search paths
+-    const QStringList localDoc = KDocTools::documentationDirs();
++    QStringList localDoc = KDocTools::documentationDirs();
++    QStringList fallbacklocalDoc = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("doc/kde/HTML"), QStandardPaths::LocateDirectory);
++    localDoc.append(fallbacklocalDoc);
+ 
+     QStringList langs = KLocalizedString::languages();
+     langs.append(QStringLiteral("en"));
+
