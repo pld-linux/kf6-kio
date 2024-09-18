@@ -8,7 +8,7 @@
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
 Version:	6.6.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -21,6 +21,7 @@ BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
 BuildRequires:	Qt6Qml-devel >= %{qtver}
+BuildRequires:	Qt6Qt5Compat-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	Qt6Xml-devel >= %{qtver}
