@@ -8,7 +8,7 @@
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
 Version:	6.6.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -195,6 +195,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkuriikwsfiltereng_private.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/designer/kio6widgets.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/remotenotifier.so
+%dir %{_libdir}/qt6/plugins/kf6/kio
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_file.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_ftp.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_ghelp.so
@@ -202,6 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_http.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_remote.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_trash.so
+%dir %{_libdir}/qt6/plugins/kf6/kiod
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kioexecd.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kpasswdserver.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kssld.so
