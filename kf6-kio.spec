@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.10
+%define		kdeframever	6.11
 %define		qtver		5.15.2
 %define		kfname		kio
 
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
-Version:	6.10.0
+Version:	6.11.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9cedea5e4efdf2e2d7577c0d2eeeccbf
+# Source0-md5:	76a597b191d8a1ff103dec70137635a7
 Patch0:		kio_help-fallback-to-kde4-docs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
@@ -144,7 +144,7 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 
 %prep
 %setup -q -n %{kfname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %cmake -B build \
@@ -212,6 +212,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/kuriikwsfilter.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/kurisearchfilter.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/localdomainurifilter.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio_dnd/dropintonewfolder.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kiod6
 %attr(755,root,root) %{_prefix}/libexec/kf6/kioexec
 %attr(755,root,root) %{_prefix}/libexec/kf6/kioworker
@@ -369,6 +370,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf6/searchproviders/yahoo_video.desktop
 %{_datadir}/kf6/searchproviders/yandex.desktop
 %{_datadir}/kf6/searchproviders/youtube.desktop
+%{_datadir}/kf6/searchproviders/caniuse.desktop
+%{_datadir}/kf6/searchproviders/dockerhub.desktop
+%{_datadir}/kf6/searchproviders/mdn.desktop
+%{_datadir}/kf6/searchproviders/nixpkgs.desktop
+%{_datadir}/kf6/searchproviders/npm.desktop
 %{_datadir}/qlogging-categories6/kio.categories
 %{_datadir}/qlogging-categories6/kio.renamecategories
 %{_desktopdir}/org.kde.kiod6.desktop
