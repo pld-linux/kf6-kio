@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kio
 
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	88d8fe414593739e7ab725fcdd5269dd
+# Source0-md5:	fce8acd1a58fc5604a42f4e11aacb40e
 Patch0:		kio_help-fallback-to-kde4-docs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
@@ -192,35 +192,35 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md
 %attr(755,root,root) %{_bindir}/ktelnetservice6
 %attr(755,root,root) %{_bindir}/ktrash6
-%attr(755,root,root) %{_libdir}/libKF6KIOCore.so.*.*
+%{_libdir}/libKF6KIOCore.so.*.*
 %ghost %{_libdir}/libKF6KIOCore.so.6
-%attr(755,root,root) %{_libdir}/libKF6KIOFileWidgets.so.*.*
+%{_libdir}/libKF6KIOFileWidgets.so.*.*
 %ghost %{_libdir}/libKF6KIOFileWidgets.so.6
-%attr(755,root,root) %{_libdir}/libKF6KIOGui.so.*.*
+%{_libdir}/libKF6KIOGui.so.*.*
 %ghost %{_libdir}/libKF6KIOGui.so.6
-%attr(755,root,root) %{_libdir}/libKF6KIOWidgets.so.*.*
+%{_libdir}/libKF6KIOWidgets.so.*.*
 %ghost %{_libdir}/libKF6KIOWidgets.so.6
-%attr(755,root,root) %{_libdir}/libkuriikwsfiltereng_private.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/kio6widgets.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/remotenotifier.so
+%{_libdir}/libkuriikwsfiltereng_private.so
+%{_libdir}/qt6/plugins/designer/kio6widgets.so
+%{_libdir}/qt6/plugins/kf6/kded/remotenotifier.so
 %dir %{_libdir}/qt6/plugins/kf6/kio
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_file.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_ftp.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_ghelp.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_help.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_http.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_remote.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_trash.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_file.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_ftp.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_ghelp.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_help.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_http.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_remote.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_trash.so
 %dir %{_libdir}/qt6/plugins/kf6/kiod
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kioexecd.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kpasswdserver.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kiod/kssld.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/fixhosturifilter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/kshorturifilter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/kuriikwsfilter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/kurisearchfilter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/urifilters/localdomainurifilter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio_dnd/dropintonewfolder.so
+%{_libdir}/qt6/plugins/kf6/kiod/kioexecd.so
+%{_libdir}/qt6/plugins/kf6/kiod/kpasswdserver.so
+%{_libdir}/qt6/plugins/kf6/kiod/kssld.so
+%{_libdir}/qt6/plugins/kf6/urifilters/fixhosturifilter.so
+%{_libdir}/qt6/plugins/kf6/urifilters/kshorturifilter.so
+%{_libdir}/qt6/plugins/kf6/urifilters/kuriikwsfilter.so
+%{_libdir}/qt6/plugins/kf6/urifilters/kurisearchfilter.so
+%{_libdir}/qt6/plugins/kf6/urifilters/localdomainurifilter.so
+%{_libdir}/qt6/plugins/kf6/kio_dnd/dropintonewfolder.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kiod6
 %attr(755,root,root) %{_prefix}/libexec/kf6/kioexec
 %attr(755,root,root) %{_prefix}/libexec/kf6/kioworker
