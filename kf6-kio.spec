@@ -7,12 +7,12 @@
 
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
-Version:	6.19.0
+Version:	6.19.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	fce8acd1a58fc5604a42f4e11aacb40e
+# Source0-md5:	bbd114cd3d55685d1e68fda4898f9289
 Patch0:		kio_help-fallback-to-kde4-docs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
@@ -28,31 +28,31 @@ BuildRequires:	Qt6Xml-devel >= %{qtver}
 BuildRequires:	acl-devel
 BuildRequires:	cmake >= 3.16
 BuildRequires:	heimdal-devel
-BuildRequires:	kf6-extra-cmake-modules >= %{version}
-BuildRequires:	kf6-karchive-devel >= %{version}
-BuildRequires:	kf6-kauth-devel >= %{version}
-BuildRequires:	kf6-kbookmarks-devel >= %{version}
-BuildRequires:	kf6-kcompletion-devel >= %{version}
-BuildRequires:	kf6-kconfig-devel >= %{version}
-BuildRequires:	kf6-kconfigwidgets-devel >= %{version}
-BuildRequires:	kf6-kcoreaddons-devel >= %{version}
-BuildRequires:	kf6-kcrash-devel >= %{version}
-BuildRequires:	kf6-kdbusaddons-devel >= %{version}
-BuildRequires:	kf6-kded-devel >= %{version}
-BuildRequires:	kf6-kdoctools-devel >= %{version}
-BuildRequires:	kf6-kguiaddons-devel >= %{version}
-BuildRequires:	kf6-ki18n-devel >= %{version}
-BuildRequires:	kf6-kiconthemes-devel >= %{version}
-BuildRequires:	kf6-kitemviews-devel >= %{version}
-BuildRequires:	kf6-kjobwidgets-devel >= %{version}
-BuildRequires:	kf6-knotifications-devel >= %{version}
-BuildRequires:	kf6-kservice-devel >= %{version}
-BuildRequires:	kf6-ktextwidgets-devel >= %{version}
-BuildRequires:	kf6-kwallet-devel >= %{version}
-BuildRequires:	kf6-kwidgetsaddons-devel >= %{version}
-BuildRequires:	kf6-kwindowsystem-devel >= %{version}
-BuildRequires:	kf6-kxmlgui-devel >= %{version}
-BuildRequires:	kf6-solid-devel >= %{version}
+BuildRequires:	kf6-extra-cmake-modules >= %{kdeframever}
+BuildRequires:	kf6-karchive-devel >= %{kdeframever}
+BuildRequires:	kf6-kauth-devel >= %{kdeframever}
+BuildRequires:	kf6-kbookmarks-devel >= %{kdeframever}
+BuildRequires:	kf6-kcompletion-devel >= %{kdeframever}
+BuildRequires:	kf6-kconfig-devel >= %{kdeframever}
+BuildRequires:	kf6-kconfigwidgets-devel >= %{kdeframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-kcrash-devel >= %{kdeframever}
+BuildRequires:	kf6-kdbusaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-kded-devel >= %{kdeframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kdeframever}
+BuildRequires:	kf6-kguiaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-ki18n-devel >= %{kdeframever}
+BuildRequires:	kf6-kiconthemes-devel >= %{kdeframever}
+BuildRequires:	kf6-kitemviews-devel >= %{kdeframever}
+BuildRequires:	kf6-kjobwidgets-devel >= %{kdeframever}
+BuildRequires:	kf6-knotifications-devel >= %{kdeframever}
+BuildRequires:	kf6-kservice-devel >= %{kdeframever}
+BuildRequires:	kf6-ktextwidgets-devel >= %{kdeframever}
+BuildRequires:	kf6-kwallet-devel >= %{kdeframever}
+BuildRequires:	kf6-kwidgetsaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-kwindowsystem-devel >= %{kdeframever}
+BuildRequires:	kf6-kxmlgui-devel >= %{kdeframever}
+BuildRequires:	kf6-solid-devel >= %{kdeframever}
 BuildRequires:	libblkid-devel
 BuildRequires:	libmount-devel
 BuildRequires:	libxml2-devel
@@ -73,29 +73,28 @@ Requires:	Qt6Qml >= %{qtver}
 Requires:	Qt6Widgets >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
-Requires:	kf6-karchive >= %{version}
-Requires:	kf6-kauth >= %{version}
-Requires:	kf6-kbookmarks >= %{version}
-Requires:	kf6-kcompletion >= %{version}
-Requires:	kf6-kconfig >= %{version}
-Requires:	kf6-kconfigwidgets >= %{version}
-Requires:	kf6-kcoreaddons >= %{version}
-Requires:	kf6-kcrash >= %{version}
-Requires:	kf6-kdbusaddons >= %{version}
-Requires:	kf6-kdoctools >= %{version}
-Requires:	kf6-ki18n >= %{version}
-Requires:	kf6-kiconthemes >= %{version}
-Requires:	kf6-kitemviews >= %{version}
-Requires:	kf6-kjobwidgets >= %{version}
-Requires:	kf6-knotifications >= %{version}
-Requires:	kf6-kservice >= %{version}
-Requires:	kf6-ktextwidgets >= %{version}
-Requires:	kf6-kwallet >= %{version}
-Requires:	kf6-kwidgetsaddons >= %{version}
-Requires:	kf6-kwindowsystem >= %{version}
-Requires:	kf6-kxmlgui >= %{version}
-Requires:	kf6-solid >= %{version}
-#Obsoletes:	kf5-%{kfname} < %{version}
+Requires:	kf6-karchive >= %{kdeframever}
+Requires:	kf6-kauth >= %{kdeframever}
+Requires:	kf6-kbookmarks >= %{kdeframever}
+Requires:	kf6-kcompletion >= %{kdeframever}
+Requires:	kf6-kconfig >= %{kdeframever}
+Requires:	kf6-kconfigwidgets >= %{kdeframever}
+Requires:	kf6-kcoreaddons >= %{kdeframever}
+Requires:	kf6-kcrash >= %{kdeframever}
+Requires:	kf6-kdbusaddons >= %{kdeframever}
+Requires:	kf6-kdoctools >= %{kdeframever}
+Requires:	kf6-ki18n >= %{kdeframever}
+Requires:	kf6-kiconthemes >= %{kdeframever}
+Requires:	kf6-kitemviews >= %{kdeframever}
+Requires:	kf6-kjobwidgets >= %{kdeframever}
+Requires:	kf6-knotifications >= %{kdeframever}
+Requires:	kf6-kservice >= %{kdeframever}
+Requires:	kf6-ktextwidgets >= %{kdeframever}
+Requires:	kf6-kwallet >= %{kdeframever}
+Requires:	kf6-kwidgetsaddons >= %{kdeframever}
+Requires:	kf6-kwindowsystem >= %{kdeframever}
+Requires:	kf6-kxmlgui >= %{kdeframever}
+Requires:	kf6-solid >= %{kdeframever}
 %requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -126,17 +125,16 @@ Requires:	Qt6Concurrent-devel >= %{qtver}
 Requires:	Qt6DBus-devel >= %{qtver}
 Requires:	Qt6Network-devel >= %{qtver}
 Requires:	cmake >= 3.16
-Requires:	kf6-kbookmarks-devel >= %{version}
-Requires:	kf6-kcompletion-devel >= %{version}
-Requires:	kf6-kconfig-devel >= %{version}
-Requires:	kf6-kcoreaddons-devel >= %{version}
-Requires:	kf6-kitemviews-devel >= %{version}
-Requires:	kf6-kjobwidgets-devel >= %{version}
-Requires:	kf6-kservice-devel >= %{version}
-Requires:	kf6-kwindowsystem-devel >= %{version}
-Requires:	kf6-kxmlgui-devel >= %{version}
-Requires:	kf6-solid-devel >= %{version}
-#Obsoletes:	kf5-%{kfname}-devel < %{version}
+Requires:	kf6-kbookmarks-devel >= %{kdeframever}
+Requires:	kf6-kcompletion-devel >= %{kdeframever}
+Requires:	kf6-kconfig-devel >= %{kdeframever}
+Requires:	kf6-kcoreaddons-devel >= %{kdeframever}
+Requires:	kf6-kitemviews-devel >= %{kdeframever}
+Requires:	kf6-kjobwidgets-devel >= %{kdeframever}
+Requires:	kf6-kservice-devel >= %{kdeframever}
+Requires:	kf6-kwindowsystem-devel >= %{kdeframever}
+Requires:	kf6-kxmlgui-devel >= %{kdeframever}
+Requires:	kf6-solid-devel >= %{kdeframever}
 
 %description devel
 Header files for %{kfname} development.
