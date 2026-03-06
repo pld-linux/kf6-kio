@@ -8,7 +8,7 @@
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
 Version:	6.23.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -218,6 +218,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/kf6/urifilters/kuriikwsfilter.so
 %{_libdir}/qt6/plugins/kf6/urifilters/kurisearchfilter.so
 %{_libdir}/qt6/plugins/kf6/urifilters/localdomainurifilter.so
+%dir %{_libdir}/qt6/plugins/kf6/kio_dnd
 %{_libdir}/qt6/plugins/kf6/kio_dnd/dropintonewfolder.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kiod6
 %attr(755,root,root) %{_prefix}/libexec/kf6/kioexec
