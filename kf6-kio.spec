@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.25
+%define		kdeframever	6.26
 %define		qtver		5.15.2
 %define		kfname		kio
 
 Summary:	Network transparent access to files and data
 Name:		kf6-%{kfname}
-Version:	6.25.0
-Release:	2
+Version:	6.26.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	fe73f8b520cdae8d52443e940ee8bd73
+# Source0-md5:	9f3a43b9ebfabae83f0b4031cba44298
 Patch0:		kio_help-fallback-to-kde4-docs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
@@ -355,6 +355,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf6/searchproviders/rust.desktop
 %{_datadir}/kf6/searchproviders/soundcloud.desktop
 %{_datadir}/kf6/searchproviders/sourceforge.desktop
+%{_datadir}/kf6/searchproviders/startpage.desktop
 %{_datadir}/kf6/searchproviders/technorati.desktop
 %{_datadir}/kf6/searchproviders/technoratitags.desktop
 %{_datadir}/kf6/searchproviders/thesaurus.desktop
