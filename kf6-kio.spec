@@ -116,6 +116,21 @@ file-based interface. This makes the data accessible in all
 applications using the KDE file dialog or any other KIO enabled
 infrastructure.
 
+%description -l pl.UTF-8
+Ten szkielet implementuje prawie wszystkie funkcje do zarządzania
+plikami jakich potrzebujesz. Właściwie, menadżer plików KDE (Dolphin)
+i okienko dialogowe wyboru plików KDE też tego używa do zarządzania
+plikami, także przez sieć.
+
+Wspiera odczytywanie plików lokalnie, przez HTTP i FTP prosto z
+pudełka, i może być rozszerzane do wspierania innych protokołów.
+Dostępny jest zestaw wtyczek do obsługi różych protokołów, np. SSH.
+
+Ten szkielet możę być też użyty jako mostek między natywnym protokołem
+a interfejsem plikowym. To pozwala na dostęp do danych we wszystkich
+aplikacjach KDE używających okienka dialogowego wyboru plików lub
+innych korzystających z infrastruktury KIO.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
